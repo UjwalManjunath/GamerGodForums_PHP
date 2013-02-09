@@ -1,0 +1,23 @@
+.breadBoxTop,.breadBoxBottom{background-color:#fff;margin:0 auto;overflow:hidden;zoom:1;clear:both;margin:0 20px;width:auto;}
+.breadBoxTop{border-top:2px solid #d9d7d7; width:100%;position:relative;right:20px;}
+.breadBoxTop .topCtrl{margin-left:5px;float:right;line-height:24px;}
+.breadcrumb{font-size:11px;background-image:url('../images/breadcrumb_bg2.png');background-repeat:repeat-x;border-right:1px solid rgb(204,204,204);border-left:1px solid rgb(204,204,204);overflow:hidden;zoom:1;}
+.breadcrumb a,.breadcrumb a:visited{color:#848484;font-family:Arial,sans-serif;text-transform:lowercase;}
+.breadcrumb .boardTitle{display:none;}
+.breadcrumb .crust{display:block;float:left;position:relative;zoom:1;}
+.breadcrumb .crust a.crumb{text-decoration:none;background-color:#ededed;padding:0 10px 0 18px;margin-bottom:-1px;outline:0 none;-moz-outline-style:0 none;display:block;line-height:24px;_border-bottom:none;height:24px;}
+.breadcrumb .crust:first-child a.crumb{padding-left:10px;}
+.breadcrumb .crust:last-child a.crumb{font-weight:bold;background-color:#d9d7d7;}
+.breadcrumb .crust:last-child .arrow span{border-left-color:#d9d7d7!important;}
+.breadcrumb .crust .arrow{border:12px solid transparent;border-right:1px none black;border-left-color:rgb(187,187,187);display:block;position:absolute;right:-12px;top:0px;z-index:50;width:0px;height:0px;}
+.breadcrumb .crust .arrow span{border:12px solid transparent;border-right:1px none black;border-left-color:#ededed;display:block;position:absolute;left:-13px;top:-12px;z-index:51;white-space:nowrap;overflow:hidden;text-indent:9999px;width:0px;height:0px;}
+.breadcrumb .crust:hover a.crumb{color:#3c3c3c;background-color:#d9d7d7;}
+.breadcrumb .crust:hover .arrow span{border-left-color:#d9d7d7;}
+.breadcrumb .crust .arrow{_display:none;}
+.breadcrumb .jumpMenuTrigger{background:transparent url('styles/aurora/xenforo/widgets/quicknav.png') no-repeat;margin:5px;display:block;float:right;white-space:nowrap;text-indent:9999px;overflow:hidden;width:65px;height:13px;}
+
+
+
+
+
+

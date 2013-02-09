@@ -1,0 +1,54 @@
+
+
+
+
+#contentuser { display: block; width: 100%; margin-top: 10px; margin-left: 10px;  }
+
+#leftuser { display: block; width: 72%; float: left; overflow: hidden; margin-right: 20px; }
+#rightuser{ display: block; width: 24%; float: left; overflow: hidden; }
+
+
+
+/* @group left */
+#userStatsuser { display: block; width: auto; background-color: #f9f9f9; height: 180px; border: 1px solid #ccc; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 12px; }
+
+#userStatsuser .picuser { float: left; display: block; margin-right: 10px; margin-top: 0px; }
+#userStatsuser .picuser a img { padding: 7px; background: #fff; border: 1px solid #ccc; }
+
+#userStatsuser .datauser { float: left; display: block; position:  relative; width: 665px; height: 180px; padding: 4px; padding-left: 15px; background: #e6e6e6; overflow:  hidden; box-sizing: border-box; -moz-box-sizing: border-box; }
+#userStatsuser .datauser h1 { color: #474747; line-height: 1.6em; text-shadow: 0px 1px 1px #fff; }
+#userStatsuser .datauser h3 { color: #666; line-height: 0.9em; margin-bottom: 5px; }
+#userStatsuser .datauser h4 { font-size: 1.2em; line-height: 1.3em; }
+
+#userStatsuser .datauser .socialMediaLinksuser { position: absolute; right: 6px; top: 8px; }
+#userStatsuser .datauser .socialMediaLinksuser a img { margin-right: 5px; }
+
+#userStatsuser .datauser .sepuser { clear: both; margin-top: 6px; width: 320px; height: 1px; border-bottom: 1px solid #ccc; margin-bottom: 0; }
+#userStatsuser .datauser ul.numbersuser { list-style: none; width: 648px; padding-top: 7px; margin-top: 0; border-top: 1px solid #fff; color: #676767; }
+#userStatsuser .datauser ul.numbersuser li { width: 200px; float: left; display: block; padding-left: 8px; height: 90px; border-right: 1px dotted #bbb; text-transform: uppercase; }
+#userStatsuser .datauser ul.numbersuser li strong { color: #434343; display: block; font-size: 1.8em; line-height: 1.1em; font-weight: bold; }
+
+/* @group right */
+#rightuser .gcontentuser{ display: block; margin-bottom: 20px; }
+#rightuser .gcontentuser .headuser { background: #589fc6; border: 1px solid #3e82a7; padding-left: 8px; }
+#rightuser .gcontentuser .headuser h1 { color: #fafcfd; font-weight: bold; font-size: 1.4em; padding-bottom: 8px;}
+
+#rightuser .gcontentuser .boxyuser { border-radius: 0px 0px 5px 5px; border: 1px solid #ccc; border-top: 0px; padding: 10px 8px; background: #f9f9f9; }
+
+#rightuser .gcontentuser .boxyuser .badgeCountuser { margin-bottom: 10px;margin-top: 15px;  }
+#rightuser .gcontentuser .boxyuser .badgeCountuser a img { margin-right: 8px; }
+#rightuser .gcontentuser .boxyuser span { font-size: 1.2em; display: block; margin-bottom: 7px; }
+
+#rightuser .gcontentuser .boxyuser .friendslistuser { display: block; margin-bottom: 15px; }
+#rightuser .gcontentuser .boxyuser .frienduser { border-top: 1px solid #ccc; float: left; height: 25px; padding: 5px 5px 5px 4px; width: 250px; }
+#rightuser .gcontentuser .boxyuser .frienduser img { border: 1px solid #ccc; float: left; padding: 2px; background: #fff; margin-right: 4px; }
+#rightuser .gcontentuser .boxyuser .frienduser .friendlyuser { position: relative; top: 5px; font-size: 1.2em; }
+
+/** @group clearfix **/
+.clearfixuser:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfixuser { display: inline-block; }
+ 
+html[xmlns] .clearfixuser { display: block; }
+* html .clearfixuser { height: 1%; }
+
+.nobrdruser { border: 0px !important; }
