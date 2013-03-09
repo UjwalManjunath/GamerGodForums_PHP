@@ -121,7 +121,7 @@ else
 		echo '<script language="javascript">';
 		echo 'document.getElementById(\'welcome\').innerHTML = "Hello '.$_SESSION['user_name'].'";';
 		echo 'document.getElementById(\'open\').innerHTML = "Logout";';
-		echo 'document.getElementById('open').href="logout.php";';
+		echo 'document.getElementById(\'open\').href="logout.php";';
 		echo '</script>';
 		if((isset($_SESSION['user_level'])) && (($_SESSION['user_level']=="1") || ($_SESSION['user_level']=="2")))
 		{
