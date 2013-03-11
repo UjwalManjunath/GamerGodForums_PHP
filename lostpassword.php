@@ -7,7 +7,8 @@ require_once 'Header.php';
 include 'signin.php';
 $sentmail=0;
 
-if (!class_exists('KeyCAPTCHA_CLASS')) {
+if (!class_exists('KeyCAPTCHA_CLASS'))
+{
 	// Replace '/home/path_to_keycaptcha_file/' with the real path to keycaptcha.php
 	include('keycaptcha.php');
 }
@@ -76,8 +77,7 @@ if ($kc_o->check_result($_POST['capcode']))
 			}
 			else
 			{
-			echo "username or email not found";
-			
+                echo "username or email not found";
 			}
 		
 		
@@ -85,14 +85,15 @@ if ($kc_o->check_result($_POST['capcode']))
 		}
 		else
 		{
-		echo "error in query";
+            echo "error in query";
 		}
 		
 		
 	}
 	
 }
-else {
+else
+{
 	// A visitor solved KeyCAPTCHA task incorrectly
 	// Add your code that will generate an error message
 }
@@ -100,62 +101,45 @@ else {
 
 if(!$sentmail)
 {
-?>
+    echo '<div class="pageContent">';
+    echo '<div class="titleBar">';
+    echo '<div id="titleBar_Helper"><h1>Lost Password';
+    echo '</h1>';
+    echo '</div>';
+    echo '</div>';
+    echo '<div id="azk99838" style="text-align: center;"></div>';
+    echo '<form action="" method="post" class="xenForm formOverlay">';
+    echo 'If you have forgotten your password, you can use this form to reset your password. You will receive an email with instructions.';
+    echo '<dl class="ctrlUnit">';
+    echo '<dt><label for="ctrl_username_email">*Username or Email:</label></dt>';
+    echo '<dd><input type="text" name="username_email" class="textCtrl" id="ctrl_username_email" autofocus="true"></dd>';
+    echo '</dl>';
+    echo '<fieldset>';
+    echo '<dl class="ctrlUnit">';
+    echo '<dt>Verification:</dt>';
+    echo '<dd>';
+    echo '<table id="keycaptcha_verification"><tbody><tr><td>';
+    echo '<input type="hidden" name="capcode" id="capcode" value="false" />';
 
-<div class="pageContent">
- 
- 
-<div class="titleBar">
-<div id="titleBar_Helper"><h1>Lost Password
-</h1>
-</div>
-</div>
-<div id="azk99838" style="text-align: center;"></div>
- 
-<form action="" method="post" class="xenForm formOverlay">
-If you have forgotten your password, you can use this form to reset your password. You will receive an email with instructions.
-<dl class="ctrlUnit">
-<dt><label for="ctrl_username_email">*Username or Email:</label></dt>
-<dd><input type="text" name="username_email" class="textCtrl" id="ctrl_username_email" autofocus="true"></dd>
-</dl>
-<fieldset>
-<dl class="ctrlUnit">
-<dt>Verification:</dt>
-<dd>
-<table id="keycaptcha_verification"><tbody><tr><td>
-<input type="hidden" name="capcode" id="capcode" value="false" />
-<?php
-if (!class_exists('KeyCAPTCHA_CLASS')) {
-	// Replace '/home/path_to_keycaptcha_file/' with the real path to keycaptcha.php
-	include('keycaptcha.php');
-}
-$kc_o = new KeyCAPTCHA_CLASS();
-echo $kc_o->render_js();
+    if (!class_exists('KeyCAPTCHA_CLASS'))
+    {
+        // Replace '/home/path_to_keycaptcha_file/' with the real path to keycaptcha.php
+        include('keycaptcha.php');
+    }
+    $kc_o = new KeyCAPTCHA_CLASS();
+    echo $kc_o->render_js();
 
-
-
-
-
-
-
-?>
-
-
- </td></tr></tbody></table></dd>
-</dl>
-</fieldset>
-<dl class="ctrlUnit submitUnit">
-<dt></dt>
-<dd><input type="submit" value="Reset Password" accesskey="s" class="button primary"></dd>
-</dl>
-<input type="hidden" name="_xfToken" value="">
-</form>
-<div id="azk44987" style="text-align: center;"></div>
- 
-
-</div>
-
-<?php
+    echo '</td></tr></tbody></table></dd>';
+    echo '</dl>';
+    echo '</fieldset>';
+    echo '<dl class="ctrlUnit submitUnit">';
+    echo '<dt></dt>';
+    echo '<dd><input type="submit" value="Reset Password" accesskey="s" class="button primary"></dd>';
+    echo '</dl>';
+    echo '<input type="hidden" name="_xfToken" value="">';
+    echo '</form>';
+    echo '<div id="azk44987" style="text-align: center;"></div>';
+    echo '</div>';
 }
 require_once 'Footer.html'; 
 ?>
