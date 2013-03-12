@@ -285,7 +285,7 @@
     
     function savePost($input, $newThread, $input2)
     {
-        $mysqli = new mysqli('localhost', 'umanjuna', 'muddu_1990', 'umanjuna') or die ("error");
+        $mysqli = new mysqli(SQL_HOST, SQL_USER, SQL_PASS, SQL_DB) or die ("error");
         $postOK = isValidPost($input, $newThread);
         //$post2OK = isValidAttachment($input2);
         if (!$postOK)
