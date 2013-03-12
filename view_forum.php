@@ -161,7 +161,7 @@ else
 					{
 						echo "topc_frozen count error";
 					}
-                $conn1->close();
+               // $conn1->close();
                 if($tempfreeze == 0)
 					$content .= '<input name="freeze" type="submit" id="freeze" value="Freeze">'; 
                 else
