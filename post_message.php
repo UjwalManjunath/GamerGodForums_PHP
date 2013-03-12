@@ -10,13 +10,14 @@ include 'signin.php';
 
 $result = processPost();	 
 echo $result['showBox'];
-if ($result['showBox']) {
+if ($result['showBox'])
+{
 	$id= $_GET['id'];
 	echo messageBox(true, $result['errorHTML'],$id);
-} else {
+}
+else
+{
 	echo $result['okMessage'];
-
-}      
-
+}
 require_once 'Footer.html'; 
 ?>
