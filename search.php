@@ -302,137 +302,99 @@ blockquote {
     }
     else
     {
-        <form method="post" action="" >
-        <table class="tborder" cellpadding="6" cellspacing="1" border="0" width="85%" align="center">
-        <tbody><tr>
-            <td class="tcat" style="    height: 22px;">
-                Search Forums
-            </td>
-        </tr>
-        <tr>
-            <td class="panelsurround" align="center">
-
-            <table class="panelsearch" cellpadding="0" cellspacing="3" border="0" width="100%">
-            <tbody><tr>
-                <td align="left" valign="top" width="50%">
-                    <fieldset class="fieldset" style="margin:0px">
-                        <legend style="font-size: 2em;">Search by Keyword</legend>
-                        <table cellpadding="0" cellspacing="3" border="0">
-                        <tbody><tr>
-                            <td colspan="2">
-                                <div style="font-size: 1.3em;">Keyword(s):</div>
-                                <div><input type="text" class="bginput" name="query" size="35" value="" style="width:350px; font-size:1.5em;" required="required"></div>
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                
-                                    
-                                </select>
-                            </td>
-                        </tr>
-                        
-                        </tbody></table>
-                    </fieldset>
-                </td>
-                <td align="left" valign="top" width="50%">
-                    <fieldset class="fieldset" style="margin:0px">
-                        <legend style="    font-size: 2em;">Search by User Name</legend>
-                        <table cellpadding="0" cellspacing="3" border="0">
-                        <tbody><tr>
-                            <td colspan="2">
-                                <div style="font-size: 1.3em;">User Name:</div>
-                                <div id="userfield">
-                                    <input type="text" class="bginput" name="searchuser" id="userfield_txt" size="35" value="" style="width:350px;font-size:1.5em;" autocomplete="off">
-                                </div>
-                                
-                                
-                                    <div id="userfield_menu" class="vbmenu_popup" style="display: none; position: absolute; z-index: 50;"></div>
-                                    
-                                
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                
-                            </td>
-                            <td><label for="cb_exactname"></td>
-                        </tr>
-                        
-                        </tbody></table>
-                    </fieldset>
-
-                </td>
-            </tr>
-            
-            <tr>
-                <td align="left" valign="top" colspan="2">
-
-        </td>
-            </tr>
-            
-            </tbody></table>
-
-            <div align="left">
-
-            <div class="thead" style="padding:6px">
-            
-                Search Options
-            </div>
-
-            <div id="collapseobj_search_adv" style="">
-            <table class="panel" cellpadding="0" cellspacing="3" border="0" width="100%">
-            <tbody><tr valign="top">
-                
-                
-                <td width="50%">
-                    
-
-                    <fieldset class="fieldset" style="margin:0px">
-                        <legend style="    font-size: 2em;">Search in Forum(s)</legend>
-                        <div style="padding:3px">
-                            <div>
-                                <select style="width:100%" name="forumchoice" size="17" >
-                                    <option value="0" selected="selected">Search All Forums</option>
-							<?php
-							$query = "select * from categories_proj4";
-							$sql = $conn->query($query) or die("error");
-							while ($row = $sql->fetch_assoc())
-							{//looks into database
-
-								echo '<option value="'.$row['cat_id'].'" >'.$row['cat_name'].'</option>';
-								
-							}
-							?>
-
-						</select>
-					</div>
-					
-					
-				</div>
-			</fieldset>
-		</td>
-		<td width="50%">
-		
-		</td>
-		
-	</tr>
-	</tbody></table>
-	</div>
-
-	</div>
-
-	<div style="margin-top:6px">
-		<input type="submit" class="button" name="dosearch" value="Search Now" >
-		<input type="reset" class="button" value="Reset Fields"  ">
-	</div>
-	</td>
-</tr>
-</tbody></table>
-<?php
+        echo '<form method="post" action="" >';
+        echo '<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="85%" align="center">';
+        echo '<tbody><tr>';
+        echo '<td class="tcat" style="    height: 22px;">Search Forums';
+        echo '</td>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<td class="panelsurround" align="center">';
+        echo '<table class="panelsearch" cellpadding="0" cellspacing="3" border="0" width="100%">';
+        echo '<tbody><tr>';
+        echo '<td align="left" valign="top" width="50%">';
+        echo '<fieldset class="fieldset" style="margin:0px">';
+        echo '<legend style="font-size: 2em;">Search by Keyword</legend>';
+        echo '<table cellpadding="0" cellspacing="3" border="0">';
+        echo '<tbody><tr>';
+        echo '<td colspan="2">';
+        echo '<div style="font-size: 1.3em;">Keyword(s):</div>';
+        echo '<div><input type="text" class="bginput" name="query" size="35" value="" style="width:350px; font-size:1.5em;" required="required"></div>';
+        echo '</td>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<td>';
+        echo '</select>';
+        echo '</td>';
+        echo '</tr>';
+        echo '</tbody></table>';
+        echo '</fieldset>';
+        echo '</td>';
+        echo '<td align="left" valign="top" width="50%">';
+        echo '<fieldset class="fieldset" style="margin:0px">';
+        echo '<legend style="    font-size: 2em;">Search by User Name</legend>';
+        echo '<table cellpadding="0" cellspacing="3" border="0">';
+        echo '<tbody><tr>';
+        echo '<td colspan="2">';
+        echo '<div style="font-size: 1.3em;">User Name:</div>';
+        echo '<div id="userfield">';
+        echo '<input type="text" class="bginput" name="searchuser" id="userfield_txt" size="35" value="" style="width:350px;font-size:1.5em;" autocomplete="off">';
+        echo '</div>';
+        echo '<div id="userfield_menu" class="vbmenu_popup" style="display: none; position: absolute; z-index: 50;"></div>';
+        echo '</td>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<td>';
+        echo '</td>';
+        echo '<td><label for="cb_exactname"></td>';
+        echo '</tr>';
+        echo '</tbody></table>';
+        echo '</fieldset>';
+        echo '</td>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<td align="left" valign="top" colspan="2">';
+        echo '</td>';
+        echo '</tr>';
+        echo '</tbody></table>';
+        echo '<div align="left">';
+        echo '<div class="thead" style="padding:6px">Search Options';
+        echo '</div>';
+        echo '<div id="collapseobj_search_adv" style="">';
+        echo '<table class="panel" cellpadding="0" cellspacing="3" border="0" width="100%">';
+        echo '<tbody><tr valign="top">';
+        echo '<td width="50%">';
+        echo '<fieldset class="fieldset" style="margin:0px">';
+        echo '<legend style="    font-size: 2em;">Search in Forum(s)</legend>';
+        echo '<div style="padding:3px">';
+        echo '<div>';
+        echo '<select style="width:100%" name="forumchoice" size="17" >';
+        echo '<option value="0" selected="selected">Search All Forums</option>';
+        $query = "select * from categories_proj4";
+        $sql = $conn->query($query) or die("error");
+        while ($row = $sql->fetch_assoc())
+        {//looks into database
+            echo '<option value="'.$row['cat_id'].'" >'.$row['cat_name'].'</option>';
+        }
+        echo '</select>';
+        echo '</div>';
+        echo '</div>';
+        echo '</fieldset>';
+		echo '</td>';
+		echo '<td width="50%">';
+		echo '</td>';
+        echo '</tr>';
+        echo '</tbody></table>';
+        echo '</div>';
+        echo '</div>';
+        echo '<div style="margin-top:6px">';
+		echo '<input type="submit" class="button" name="dosearch" value="Search Now" >';
+		echo '<input type="reset" class="button" value="Reset Fields"  ">';
+        echo '</div>';
+        echo '</td>';
+        echo '</tr>';
+        echo '</tbody></table>';
+    }
 }
-}
- require_once 'Footer.html'; 
+require_once 'Footer.html';
 ?>
